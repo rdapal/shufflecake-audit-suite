@@ -46,8 +46,7 @@ def plot_entropy_heatmap(json_path, output_png):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Visualize Shufflecake Entropy Leakage")
-    parser.add_argument("--input", "-i", default="entropy_report.json", help="Input JSON file")
-    # Default output points to the docs folder we created in Commit 1
+    parser.add_argument("input", help="Input JSON file") 
     parser.add_argument("--output", "-o", default="../docs/entropy_heatmap.png", help="Output PNG image")
     
     args = parser.parse_args()
